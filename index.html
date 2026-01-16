@@ -1,127 +1,117 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shahi Ftah Portfolio</title>
+<title>Shahi Ftah</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- Spline Viewer script -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
 
 <style>
-body, html {
+html, body {
   margin: 0;
-  padding: 0;
   height: 100%;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
   background: #050508;
+  font-family: 'Inter', sans-serif;
   color: white;
 }
 
-/* Fullscreen Spline 3D bakgrunn */
+/* Spline = bakgrunn */
 spline-viewer {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  pointer-events: none;
+  inset: 0;
+  z-index: 0;
 }
 
-/* Hovedinnhold */
-main {
-  position: relative;
+/* Mørk overlay for lesbarhet */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(5,5,8,0.25),
+    rgba(5,5,8,0.75)
+  );
   z-index: 1;
-  padding: 6vh 5vw;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
+}
+
+/* Innhold */
+.content {
+  position: relative;
+  z-index: 2;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
   margin: 0;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  opacity: 0.75;
+}
+
+/* Rolige linker */
+.links {
+  margin-top: 40px;
+  display: flex;
+  gap: 30px;
+  font-size: 1rem;
+}
+
+.links a {
   color: #00ffe0;
+  text-decoration: none;
+  opacity: 0.85;
 }
 
-.identity p {
-  font-size: 1.3rem;
-  opacity: 0.9;
-}
-
-/* Glass-kort */
-.card {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(12px);
-  border-radius: 15px;
-  padding: 24px;
-  transition: 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-8px);
-}
-.card h3 {
-  color: #00ffe0;
-  margin-top: 0;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 18px;
-  font-size: 0.9rem;
-  opacity: 0.7;
+.links a:hover {
+  opacity: 1;
 }
 
 /* Mobil */
-@media (max-width: 900px) {
-  main { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .links {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- Jordklode-scene -->
-<spline-viewer url="https://prod.spline.design/https://prod.spline.design/bCcc9fZFL0vZFyq7/scene.splinecode"></spline-viewer>
+<!-- 🌍 Jordklode fra Spline -->
+<spline-viewer url="https://my.spline.design/holographicearthwithdynamiclines-dY57hhai1CzWQifJla5GQG4c/"></spline-viewer>
 
-<main>
+<div class="overlay"></div>
 
-  <!-- IDENTITET -->
-  <section class="identity">
-    <h1>Shahi <span>Ftah</span></h1>
-    <p>Informatikkstudent ved UiO & Softwareentusiast</p>
-  </section>
+<div class="content">
+  <h1>Shahi Ftah</h1>
+  <div class="tagline">
+    Informatikkstudent @ UiO · Software & Systems
+  </div>
 
-  <!-- INFO KORT -->
-  <section class="cards">
-    <div class="card">
-      <h3>🧠 Ferdigheter</h3>
-      <p>Python, Java, C, SQL, Linux, Docker, Git</p>
-    </div>
-
-    <div class="card">
-      <h3>🚀 Prosjekter</h3>
-      <p>Medical System (Java)<br>UDP Directory Client (C)</p>
-    </div>
-
-    <div class="card">
-      <h3>📬 Kontakt</h3>
-      <p>📍 Oslo, Norge<br>GitHub & LinkedIn</p>
-    </div>
-  </section>
-
-</main>
-
-<footer>&copy; 2026 Shahi Ayad Ftah</footer>
+  <div class="links">
+    <a href="https://github.com/ShahiFtah" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/shahiftah/" target="_blank">LinkedIn</a>
+    <a href="mailto:shahi55@outlook.com">Email</a>
+  </div>
+</div>
 
 </body>
 </html>
+
 
 
 <!--
