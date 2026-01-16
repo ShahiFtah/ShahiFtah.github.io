@@ -1,120 +1,108 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Shahi Ftah — CS Student</title>
+<title>Shahi Ftah Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
+
+<!-- Spline Viewer script -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
 
 <style>
-* { box-sizing: border-box; }
-body {
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Inter', sans-serif;
-  background: #050508;
-  color: #fff;
   overflow-x: hidden;
+  background: #050508;
+  color: white;
 }
 
-/* SPLINE BACKGROUND */
+/* Fullscreen Spline 3D bakgrunn */
 spline-viewer {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
+  pointer-events: none;
 }
 
-/* MAIN WRAPPER */
+/* Hovedinnhold */
 main {
-  min-height: 100vh;
-  padding: 10vh 8vw;
+  position: relative;
+  z-index: 1;
+  padding: 6vh 5vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 50px;
+  min-height: 100vh;
 }
 
-/* LEFT IDENTITY */
-.identity h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
+h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
   margin: 0;
-  line-height: 1;
-}
-
-.identity span {
   color: #00ffe0;
 }
 
 .identity p {
-  font-size: 1.4rem;
-  opacity: 0.85;
-  max-width: 420px;
+  font-size: 1.3rem;
+  opacity: 0.9;
 }
 
-/* RIGHT CARDS */
-.cards {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
+/* Glass-kort */
 .card {
   background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(14px);
-  border-radius: 18px;
-  padding: 28px;
-  transition: transform 0.3s ease;
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  padding: 24px;
+  transition: 0.3s ease;
 }
-
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
 }
-
 .card h3 {
-  margin-top: 0;
   color: #00ffe0;
+  margin-top: 0;
 }
 
+/* Footer */
 footer {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  opacity: 0.6;
+  text-align: center;
+  padding: 18px;
   font-size: 0.9rem;
+  opacity: 0.7;
 }
 
-/* MOBILE */
+/* Mobil */
 @media (max-width: 900px) {
-  main {
-    grid-template-columns: 1fr;
-  }
+  main { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- SPLINE BACKGROUND -->
-<spline-viewer 
-  url="https://prod.spline.design/YOUR-SCENE-HERE/scene.splinecode">
-</spline-viewer>
+<!-- Jordklode-scene -->
+<spline-viewer url="https://prod.spline.design/https://prod.spline.design/bCcc9fZFL0vZFyq7/scene.splinecode"></spline-viewer>
 
 <main>
 
-  <!-- LEFT -->
+  <!-- IDENTITET -->
   <section class="identity">
     <h1>Shahi <span>Ftah</span></h1>
-    <p>
-      Informatikkstudent @ UiO.<br>
-      Bygger software, systemer og idéer for framtida.
-    </p>
+    <p>Informatikkstudent ved UiO & Softwareentusiast</p>
   </section>
 
-  <!-- RIGHT -->
+  <!-- INFO KORT -->
   <section class="cards">
     <div class="card">
-      <h3>🧠 Skills</h3>
-      <p>Python, Java, C, SQL, Linux, Git, Docker</p>
+      <h3>🧠 Ferdigheter</h3>
+      <p>Python, Java, C, SQL, Linux, Docker, Git</p>
     </div>
 
     <div class="card">
@@ -123,18 +111,14 @@ footer {
     </div>
 
     <div class="card">
-      <h3>🌍 Kontakt</h3>
-      <p>
-        Oslo<br>
-        shahi55@outlook.com<br>
-        GitHub / LinkedIn
-      </p>
+      <h3>📬 Kontakt</h3>
+      <p>📍 Oslo, Norge<br>GitHub & LinkedIn</p>
     </div>
   </section>
 
 </main>
 
-<footer>© 2026</footer>
+<footer>&copy; 2026 Shahi Ayad Ftah</footer>
 
 </body>
 </html>
