@@ -69,6 +69,9 @@
       border-radius: 4px;
     }
 
+    #bg { position:fixed; inset:0; z-index:0; pointer-events:none; } <!----------------------------------------------------->
+    nav, main, footer { position:relative; z-index:1; }
+    
     .skip-link {
       position: absolute;
       left: -9999px;
@@ -362,6 +365,42 @@
 </head>
 <body>
 
+<script>
+const c=document.getElementById('bg'),x=c.getContext('2d');
+const r=()=>{c.width=innerWidth;c.height=innerHeight};r();
+onresize=r;
+
+let mx=-999,my=-999;
+onmousemove=e=>{mx=e.clientX;my=e.clientY};
+
+const P=Array.from({length:80},()=>({
+  x:Math.random()*innerWidth, y:Math.random()*innerHeight,
+  vx:(Math.random()-.5)*.5,   vy:(Math.random()-.5)*.5,
+  r:Math.random()*2+.5,       a:Math.random()*.6+.2
+}));
+
+(function draw(){
+  x.clearRect(0,0,c.width,c.height);
+  P.forEach((p,i)=>{
+    P.slice(i+1).forEach(q=>{
+      const d=Math.hypot(p.x-q.x,p.y-q.y);
+      if(d<130){x.strokeStyle=`rgba(200,240,96,${(1-d/130)*.15})`;
+        x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}
+    });
+    const d=Math.hypot(p.x-mx,p.y-my);
+    if(d<160){x.strokeStyle=`rgba(200,240,96,${(1-d/160)*.4})`;
+      x.beginPath();x.moveTo(p.x,p.y);x.lineTo(mx,my);x.stroke()}
+    x.fillStyle=`rgba(200,240,96,${p.a})`;
+    x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();
+    p.x=(p.x+p.vx+c.width)%c.width;
+    p.y=(p.y+p.vy+c.height)%c.height;
+  });
+  requestAnimationFrame(draw);
+})();
+</script>
+
+<canvas id="bg"></canvas> <!------------------------------------------------------------------------------------------>
+  
 <a href="#main-content" class="skip-link">Hopp til innhold</a>
 
 <div class="cursor" id="cursor"></div>
