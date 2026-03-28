@@ -56,6 +56,14 @@
       cursor: none;
     }
 
+    /* FIX: Fokus-indikator for tastaturbrukere */
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
     .cursor {
       width: 10px; height: 10px;
       background: var(--accent);
@@ -384,12 +392,16 @@
   </div>
 </header>
 
+<!-- FIX: <main> wrapper for skjermlesere ------------------->
+<main>
 <div class="divider"></div>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
-    <p class="section-label reveal">Om meg</p>
+
+    <h2 class="section-label reveal">Om meg</h2>
+    
     <div class="about-grid">
       <div class="about-text reveal">
         <p>Informatikkstudent med spesialisering i <em>Programmering og Systemarkitektur</em> ved UiO.</p>
@@ -418,7 +430,9 @@
 
     <!-- SKILLS -->
     <div class="skills-section reveal">
-      <p class="section-label" style="margin-bottom:2rem;">Ferdigheter</p>
+      
+      <h2 class="section-label" style="margin-bottom:2rem;">Ferdigheter</h2>
+      
       <div class="skills-categories">
         <div class="skill-category">
           <div class="skill-cat-title">Programmering</div>
@@ -479,7 +493,9 @@
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <p class="section-label reveal">Prosjekter</p>
+    
+    <h2 class="section-label reveal">Prosjekter</h2>
+    
     <div class="projects-grid reveal">
 
       <a href="https://github.com/ShahiFtah/LLM---CHATBOT" target="_blank" class="project-card">
@@ -590,6 +606,7 @@
   </div>
 </section>
 
+</main>
 <div class="container">
   <footer>
     <span>© 2026 Shahi Ayad Ftah</span>
