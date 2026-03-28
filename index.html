@@ -64,6 +64,19 @@
       border-radius: 4px;
     }
 
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 1rem;
+      background: var(--accent);
+      color: var(--bg);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 700;
+      z-index: 9999;
+    }
+    .skip-link:focus { left: 1rem; }
+
     .cursor {
       width: 10px; height: 10px;
       background: var(--accent);
@@ -344,11 +357,13 @@
 </head>
 <body>
 
+<a href="#main-content" class="skip-link">Hopp til innhold</a>
+
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
 <!-- NAV -->
-<nav>
+<nav aria-label="Hovednavigasjon">
   <a href="#" class="nav-logo">SF.</a>
   <div class="nav-links">
     <a href="#about">Om</a>
@@ -393,7 +408,7 @@
 </header>
 
 <!-- FIX: <main> wrapper for skjermlesere ------------------->
-<main>
+<main id="main-content">
 <div class="divider"></div>
 
 <!-- ABOUT -->
