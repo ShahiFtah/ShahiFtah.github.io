@@ -76,11 +76,11 @@
     }
 
     body.light {
-      --bg: #2d3820;
-      --fg: #f0ede6;
-      --card: #38452a;
-      --muted: #aaa898;
-      --accent: #c8f542;
+      --bg: #f5f0e8;
+      --fg: #1a1a16;
+      --card: #ede8de;
+      --muted: #6b6b60;
+      --accent: #2d7a00;
     }
             
     .skip-link {
@@ -708,7 +708,7 @@
 const toggle = document.getElementById('theme-toggle');
 toggle.addEventListener('click', () => {
   document.body.classList.toggle('light');
-  toggle.textContent = document.body.classList.contains('light') ? '🌙' : '🌿';
+toggle.textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
 });
   
 </script>
