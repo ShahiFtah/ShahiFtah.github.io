@@ -74,6 +74,13 @@
       outline-offset: 3px;
       border-radius: 4px;
     }
+
+    body.light {
+      --bg: #f5f5f0;
+      --fg: #0a0a08;
+      --card: #e8e8e2;
+      --muted: #555550;
+    }
     
     .skip-link {
       position: absolute;
@@ -380,6 +387,7 @@
     <a href="#about">Om</a>
     <a href="#projects">Prosjekter</a>
     <a href="#contact">Kontakt</a>
+    <button id="theme-toggle" aria-label="Bytt tema" style="background:none;border:none;cursor:none;color:var(--muted);font-size:1.1rem;">🌙</button>
   </div>
 </nav>
 
@@ -678,7 +686,7 @@
 </a>
   </footer>
 </div>
-
+  
 <script>
   // Cursor
   const cursor = document.getElementById('cursor');
@@ -695,6 +703,13 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  toggle.textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
+});
+  
 </script>
 </body>
 </html>
