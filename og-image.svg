@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a08"/>
+      <stop offset="100%" stop-color="#111110"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="210" x2="1200" y2="210" stroke="#1a1a16" stroke-width="1"/>
+  <line x1="0" y1="420" x2="1200" y2="420" stroke="#1a1a16" stroke-width="1"/>
+  <line x1="400" y1="0" x2="400" y2="630" stroke="#1a1a16" stroke-width="1"/>
+  <line x1="800" y1="0" x2="800" y2="630" stroke="#1a1a16" stroke-width="1"/>
+
+  <!-- Large decorative SF watermark -->
+  <text x="620" y="520" font-family="Georgia, serif" font-style="italic" font-size="480" fill="none" stroke="#c8f542" stroke-width="1" opacity="0.04">SF</text>
+
+  <!-- Accent line left -->
+  <rect x="80" y="80" width="3" height="470" fill="#c8f542" opacity="0.15"/>
+
+  <!-- Top tag -->
+  <rect x="110" y="90" width="220" height="28" rx="14" fill="none" stroke="#c8f542" stroke-width="1"/>
+  <circle cx="128" cy="104" r="4" fill="#c8f542"/>
+  <text x="142" y="109" font-family="Arial, sans-serif" font-size="11" fill="#c8f542" letter-spacing="2">TILGJENGELIG</text>
+
+  <!-- Main name -->
+  <text x="108" y="230" font-family="Georgia, serif" font-size="110" fill="#f0ede6" letter-spacing="-3">Shahi</text>
+  <text x="108" y="355" font-family="Georgia, serif" font-style="italic" font-size="120" fill="#c8f542" letter-spacing="-3">Ftah.</text>
+
+  <!-- Divider line -->
+  <line x1="108" y1="395" x2="560" y2="395" stroke="#4a4a44" stroke-width="1"/>
+
+  <!-- Subtitle -->
+  <text x="108" y="430" font-family="Arial, sans-serif" font-size="16" fill="#888880" letter-spacing="3">INFORMATIKK · UiO · FULLSTACK &amp; CLOUD · OSLO</text>
+
+  <!-- Skills pills -->
+  <rect x="108" y="460" width="90" height="24" rx="12" fill="none" stroke="#4a4a44" stroke-width="1"/>
+  <text x="153" y="476" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle">Python</text>
+
+  <rect x="210" y="460" width="72" height="24" rx="12" fill="none" stroke="#4a4a44" stroke-width="1"/>
+  <text x="246" y="476" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle">Java</text>
+
+  <rect x="294" y="460" width="104" height="24" rx="12" fill="none" stroke="#4a4a44" stroke-width="1"/>
+  <text x="346" y="476" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle">TypeScript</text>
+
+  <rect x="410" y="460" width="66" height="24" rx="12" fill="none" stroke="#4a4a44" stroke-width="1"/>
+  <text x="443" y="476" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle">Kotlin</text>
+
+  <!-- URL bottom right -->
+  <text x="1120" y="570" font-family="Arial, sans-serif" font-size="15" fill="#4a4a44" text-anchor="end" letter-spacing="1">shahiftah.me</text>
+  <line x1="980" y1="578" x2="1120" y2="578" stroke="#c8f542" stroke-width="1" opacity="0.4"/>
+
+  <!-- Stats right side -->
+  <text x="920" y="200" font-family="Georgia, serif" font-size="64" fill="#f0ede6" text-anchor="middle">3+</text>
+  <text x="920" y="228" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle" letter-spacing="2">ÅR GRUPPELÆRER</text>
+
+  <line x1="840" y1="260" x2="1000" y2="260" stroke="#1a1a16" stroke-width="1"/>
+
+  <text x="920" y="310" font-family="Georgia, serif" font-size="64" fill="#f0ede6" text-anchor="middle">17+</text>
+  <text x="920" y="338" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle" letter-spacing="2">GITHUB-PROSJEKTER</text>
+
+  <line x1="840" y1="370" x2="1000" y2="370" stroke="#1a1a16" stroke-width="1"/>
+
+  <text x="920" y="420" font-family="Georgia, serif" font-size="64" fill="#f0ede6" text-anchor="middle">10+</text>
+  <text x="920" y="448" font-family="Arial, sans-serif" font-size="11" fill="#888880" text-anchor="middle" letter-spacing="2">SERTIFIKATER</text>
+</svg>
